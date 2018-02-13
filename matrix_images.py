@@ -19,3 +19,5 @@ class OneMatrixImage:
     MEH_SMILEY = ImageConstant("images_files/smiley_meh.png")
     VERY_HAPPY_SMILEY = ImageConstant("images_files/smiley_very_happy.png")
     HEART = ImageConstant("images_files/heart.png")
+    QUESTION = ImageConstant("images_files/question.png")
+    ANGRY_SMILEY = ImageConstant("images_files/angry.png")
