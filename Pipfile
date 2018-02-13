@@ -11,6 +11,8 @@ verify_ssl = true
 
 [packages]
 
+usabilla-api = "*"
+pillow = "*"
 
 
 [requires]

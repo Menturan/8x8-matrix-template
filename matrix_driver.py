@@ -4,6 +4,7 @@ from PIL import Image
 from luma.core.interface.serial import spi, noop
 from luma.led_matrix.device import max7219
 from matrix_images import OneMatrixImage
+import logging
 
 
 class Matrix:
@@ -11,7 +12,7 @@ class Matrix:
     is_on = False
 
     def display(self, image: Image):
-        print("Change image...")
+        logging.info("Change image...")
         if not self.is_on:
             self.device.contrast(0)
             self.device.show()
@@ -32,13 +33,13 @@ class Matrix:
             sleep(0.01)
 
     def turn_off_display(self):
-        print("Turn off display.")
+        logging.info("Turn off display.")
         self.device.hide()
         self.is_on = False
 
     def __init__(self, port: int = 0, device: int = 0):
         try:
-            print("Setting up display...")
+            logging.info("Setting up display...")
             serial = spi(port=port, device=device, gpio=noop())
             self.device = max7219(serial)
             self.device.clear()
