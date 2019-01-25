@@ -6,6 +6,7 @@ from luma.led_matrix.device import max7219
 from matrix_images import OneMatrixImage
 import logging
 
+logging.basicConfig(level=logging.INFO, format='%(levelname)s:%(module)s.%(lineno)d:%(message)s',)
 
 class Matrix:
     __MAX_CONTRAST = 255
